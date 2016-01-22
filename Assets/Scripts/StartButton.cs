@@ -3,20 +3,11 @@ using System.Collections;
 
 public class StartButton : MonoBehaviour {
     private GameController gameController;
-    
 
-	void Start () {
+    void Start () {
         gameController = GameObject.FindObjectOfType<GameController>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-    void OnMouseDown()
-    {
+    }
+    void OnMouseDown(){
         gameController.EnterGameUI();
     }
-    
-    
 }
