@@ -9,10 +9,10 @@ public class GameController : MonoBehaviour
     public GameObject startUI;
     public GameObject gameUI;
     public GameObject scoreUI;
-	public GameObject resultUI;
-	public GameObject blockUI;
+    public GameObject resultUI;
+    public GameObject blockUI;
 
-	public GameObject KTplayBtn;
+    public GameObject KTplayBtn;
 
     public GameObject container;
     public GameObject[] prefabs;
@@ -21,11 +21,11 @@ public class GameController : MonoBehaviour
     Vector3 tapPosition;
     public ArrayList blocks;
 
-	void Update(){
-		if(Input.GetKey(KeyCode.Escape)){
-			Application.Quit();
-		}
+    void Update(){
+	if(Input.GetKey(KeyCode.Escape)){
+		Application.Quit();
 	}
+    }
 
     public void EnterGameUI()
     {
@@ -35,15 +35,15 @@ public class GameController : MonoBehaviour
 
         StartGame();
     }
-	public void RestartGameUI(){
-		startUI.SetActive(false);
-		resultUI.SetActive(false);
-		scoreUI.SetActive(true);
-		gameUI.SetActive(true);
-		blockUI.SetActive(true);
-		Clean();
-		StartGame();
-	}
+    public void RestartGameUI(){
+	startUI.SetActive(false);
+	resultUI.SetActive(false);
+	scoreUI.SetActive(true);
+	gameUI.SetActive(true);		
+	blockUI.SetActive(true);
+	Clean();
+	StartGame();
+    }
     //回到主选单
     public void ReturnStartUI()
     {
